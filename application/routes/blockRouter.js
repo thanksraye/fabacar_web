@@ -42,7 +42,7 @@ router.get("/findreport", loggedInOnly, async (req, res) => {
   var resData = await JSON.parse(data)
 
   console.log(resData)
-  res.render("find_report" ,{data:resData,user:Request.username});
+  res.render("find_report" ,{data:resData,user:req.username});
 });
     
     // Login View
