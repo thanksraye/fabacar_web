@@ -1,0 +1,40 @@
+<%- include('_header.ejs') %>
+<h1>내가 한 리포트 조회 </h1>
+    
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Number</th>
+            <th scope="col">barcode</th>
+            <th scope="col">contexReport</th>
+            <th scope="col">reportType</th>
+            <th scope="col">timestamp</th>
+            <th scope="col">status</th>
+            <th scope="col">username</th>
+            <th scope="col">phonenumber</th>
+            <th scope="col">email</th>
+            <!-- <th scope="col">상태변경</th> -->
+          </tr>
+        </thead>
+        <tbody>
+            <% for(i=0; i<data.length; i++) { %>
+              <% if (data[i].Record.user.name === currentUser.username) { %> 
+              <tr>
+              <h2><%= user.name %></h2>
+              <th scope="row"><%= i+1 %></th>
+              <td><%= data[i].Record.barcode %></td>
+              <td><%= data[i].Record.context_report %></td>
+              <td><%= data[i].Record.report_type %></td>
+              <td><%= data[i].Record.timestamp %></td>
+              <td><%= data[i].Record.status %></td>
+              <td><%= data[i].Record.user.name %></td>
+              <td><%= data[i].Record.user.phonenum %></td>
+              <td><%= data[i].Record.user.email %></td>
+              <!-- <th scope="col"><a href="/validatereports/<%= i %>">수정</a> </th> -->
+              </tr>
+            <% } %>
+           <% } %>
+          
+        </tbody>
+      </table>
+    <%- include('_footer.ejs') %>

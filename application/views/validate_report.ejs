@@ -1,0 +1,17 @@
+<%- include('_header.ejs') %>
+
+    </h1>
+    <div class="section">
+        
+                    <h2 style="color: white;">리포트 검증</h2>
+                    <form action="/validatereport/:report<%= reportnum %> " method="post">
+                        Report ID:<br>
+                        <input type="text" name="reportNum" value="REPORT<%= reportnum %> ">
+                        <br><br>Status:<br>
+                        <input type="text" name="status" placeholder="status">
+                        <input type="submit" value="수정">
+                        
+                    </form>
+
+    </div>
+    <%- include('_footer.ejs') %>

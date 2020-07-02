@@ -1,0 +1,39 @@
+<%- include('_header.ejs') %>
+<div class="container" >
+    <div class="section" style="text-align: center;">
+        <div class="row">
+                    <h2 >Report Create Forms</h2>
+                    <form action="/createreport" method="post">
+                        Report ID:<br>
+                        <input type="text" name="report_id" value="REPORT<%= data.length %> ">
+                        <br><br> Report Type:<br>
+                        <input type="text" name="report_type" placeholder="book">
+                        <br><br> User:<br>
+                        <input type="text" name="user_name" placeholder="user">
+                        <br><br> Email:<br>
+                        <input type="text" name="user_email" placeholder="user@djebo.com">
+                        <br><br> Phone Number:<br>
+                        <input type="text" name="user_phonenumber" placeholder="010">
+                        <br><br> Barcode:<br>
+                        <input type="text" name="barcode" placeholder="barcode">
+                        <br><br> Input Report:<br>
+                        <input type="text" name="context_report" placeholder="contexReport">
+                        <br><br> timestamp:<br>
+                        <input type="text" name="timestamp" placeholder=<%= new Date().toISOString(); %>>
+                        <br><br>
+                        <input type="submit" value="제출">
+                        <br>
+                        <br>
+
+                    </form>
+             </div>
+        </div>
+    </div>
+    <%- include('_footer.ejs') %>
+    
+
+    <div class="panel-footer">
+        <a href="/signup">Or Sign Up</a>
+    </div>
+    </body>
+    
