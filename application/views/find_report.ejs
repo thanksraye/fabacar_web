@@ -20,7 +20,7 @@
             <% for(i=0; i<data.length; i++) { %>
               <% if (data[i].Record.user.name === currentUser.username) { %> 
               <tr>
-              <h2><%= user.name %></h2>
+              <h2><%= currentUser.username %></h2>
               <th scope="row"><%= i+1 %></th>
               <td><%= data[i].Record.barcode %></td>
               <td><%= data[i].Record.context_report %></td>
