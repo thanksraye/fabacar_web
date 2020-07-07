@@ -22,14 +22,14 @@
               <tr>
               <h2><%= currentUser.username %></h2>
               <th scope="row"><%= i+1 %></th>
-              <td><%= data[i].Record.barcode %></td>
-              <td><%= data[i].Record.context_report %></td>
-              <td><%= data[i].Record.report_type %></td>
-              <td><%= data[i].Record.timestamp %></td>
-              <td><%= data[i].Record.status %></td>
-              <td><%= data[i].Record.user.name %></td>
-              <td><%= data[i].Record.user.phonenum %></td>
-              <td><%= data[i].Record.user.email %></td>
+              <td><%= data[i].Record.barcode%></td>
+              <td><%= data[i].Record.timestamp%></td>
+              <td><%= data[i].Record.report_type%></td>
+              <td><%= data[i].Record.context_report%></td>
+              <td><%= data[i].Record.status%></td>
+              <td><%= data[i].Record.user.name%></td>
+              <td><%= data[i].Record.user.email%></td>
+              <td><%= data[i].Record.user.phonenum email%></td>
               <!-- <th scope="col"><a href="/validatereports/<%= i %>">수정</a> </th> -->
               </tr>
             <% } %>
